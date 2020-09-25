@@ -1,0 +1,343 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: "Natalia";
+  src: url("fonts/natalia_colleen.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Natalia", "Lucida Sans", sans-serif;
+  min-height: 100%;
+}
+
+h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+header {
+  height: 75px;
+  background-color: #F3E9F1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+header img {
+  width: 150px;
+  height: 75px;
+}
+header a {
+  vertical-align: middle;
+  line-height: 75px;
+  margin-right: 10px;
+}
+header a:hover {
+  border-bottom: 1px solid black;
+}
+
+#articles {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+#articles article {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 325px;
+  width: 250px;
+  background-color: #F3E9F1;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #8b89fc;
+}
+#articles article img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+#articles article a {
+  background-color: #907cfb;
+  padding: 5px;
+  border-radius: 7px;
+}
+#articles article a:hover {
+  background-color: #a68efc;
+}
+
+#products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#products article {
+  background-color: #F3E9F1;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 580px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #8a70fb;
+  margin-top: 75px;
+}
+#products article img {
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+}
+#products article p {
+  text-align: center;
+}
+#products article select {
+  background-color: #866bfd;
+  border-radius: 7px;
+}
+#products article a {
+  background-color: #8a76f8;
+  padding: 5px;
+  border-radius: 7px;
+}
+#products article a:hover {
+  background-color: #836ef8;
+  cursor: pointer;
+}
+
+#bloc-basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#bloc-basket p {
+  text-align: center;
+}
+
+#basket {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+#basket article {
+  margin: 20px;
+  padding: 20px 5px 20px 5px;
+  background-color: #F3E9F1;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #F2BEE7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100px;
+  width: 270px;
+  box-sizing: content-box;
+}
+#basket article img {
+  width: 75px;
+  height: 100px;
+  border-radius: 10px;
+}
+#basket article div {
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+#basket article p, #basket article h2 {
+  text-align: center;
+}
+
+#infosArticles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 70px;
+}
+#infosArticles a {
+  width: 125px;
+  background-color: #F2BEE7;
+  padding: 5px;
+  border-radius: 7px;
+}
+#infosArticles a:hover {
+  background-color: #ea94d7;
+  cursor: pointer;
+}
+
+#TotalCommand {
+  background-color: #F3E9F1;
+  width: 280px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #F2BEE7;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#command {
+  background-color: #F3E9F1;
+  box-shadow: 2px 2px 10px #F2BEE7;
+  margin: 20px;
+  padding: 10px;
+  margin-top: -30px;
+  border-radius: 10px;
+  width: 280px;
+  visibility: hidden;
+}
+#command p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+#command p:first-child {
+  justify-content: center;
+  font-weight: bold;
+}
+#command p:last-child {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+#command p:last-child input {
+  border-radius: 6px;
+  background-color: #7573f8;
+}
+
+#bloc-confCommand {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+#bloc-confCommand #confCommand {
+  background-color: #F3E9F1;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #F2BEE7;
+}
+#bloc-confCommand article {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+}
+#bloc-confCommand a {
+  background-color: #F2BEE7;
+  padding: 5px;
+  border-radius: 7px;
+}
+#bloc-confCommand a:hover {
+  background-color: #7f64f5;
+  cursor: pointer;
+}
+
+#mentions {
+  text-align: justify;
+  margin: 20px;
+}
+#mentions a {
+  color: blue;
+  text-decoration: underline;
+}
+#mentions p {
+  font-weight: bold;
+}
+#mentions h1 {
+  font-size: 2rem;
+  padding: 20px;
+}
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background-color: #F3E9F1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+footer a {
+  vertical-align: middle;
+  line-height: 30px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 576px) {
+  header {
+    justify-content: space-around;
+    font-size: 1.5rem;
+  }
+
+  #articles {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #articles article {
+    margin: 20px;
+  }
+
+  #products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #basket {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #command {
+    width: 500px;
+  }
+  #command p {
+    justify-content: center;
+  }
+  #command p label {
+    width: 30%;
+  }
+  #command p input {
+    width: 60%;
+  }
+
+  footer {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
