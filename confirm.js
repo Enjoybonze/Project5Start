@@ -2,7 +2,7 @@
 const arrayLocalStorage = JSON.parse (localStorage.getItem ("order"));
 
 
-let OrderConf section = document.getElementById ("orderConf");
+let OrderConf, section = document.getElementById ("orderConf");
 
 let articlesElt = document.createElement ("article");
 let forValid = document.createElement ("h2");
