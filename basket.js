@@ -27,7 +27,7 @@ if (arrayLocalStorage == null) {
         let numberOfArticles = document.createElement ("p");
         let articleCounter = 1;
         let priceTotalElt = document.createElement ("p");
-        priceTotalElt.textContent = "Price:" + key.price * counterArticles + "€";
+        priceTotalElt.textContent = "Price:" + key.price * counterArticles + "$";
         let buttonsDiv = document.createElement ("div");
         let buttonAdd = document.createElement ("button");
         imageDiv.appendChild (imageElt);
@@ -48,12 +48,12 @@ if (arrayLocalStorage == null) {
         let infosArticles = document.getElementById ("infosArticles");
 
     
-        let OrderTotal price = 0;
+        let OrderTotalprice = 0;
         for (let i = 0; i <arrayLocalStorage.length; i ++) {
             priceTotalOrder + = arrayLocalStorage [i] .price;
         };
-        letPanelOrder price = document.createElement ("p");
-        priceOrderPanel.textContent = "Total of your order:" + priceTotalOrder + "€";
+        letPanelOrder.price = document.createElement ("p");
+        priceOrderPanel.textContent = "Total of your order:" + priceTotalOrder + "$";
         priceOrderPanel.setAttribute ("id", "priceTotalOrder");
         infosArticles.appendChild (priceOrderPanel);
 
@@ -160,13 +160,13 @@ if (arrayLocalStorage == null) {
                     })
                     .then (
                         function (response) {
-                            if (response.status> = 200 || response.status <= 299) {
+                            if (response.status >= 200 || response.status <= 299) {
 
                             response.json (). then (function (data) {
 
                             const orderInfos = {
                                 "orderId": data.orderId,
-                                "total price": total priceOrder
+                                "total price": totalpriceOrder
                             };
                             localStorage.setItem ("order", JSON.stringify (orderInfos));
                             window.open ("confirm.html", "_self");
@@ -187,4 +187,4 @@ if (arrayLocalStorage == null) {
                     text: "An error occurred while registering your order, please try again.",
                 })
             };
-        });
+        });}

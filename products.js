@@ -1,11 +1,11 @@
-let urlProduct = window.location.search.substr(4); //закладка.
+let urlProduct = window.location.search.substr(4);
 let productsElt = document.getElementById("products");
 fetch("http://localhost:3000/api/teddies/" + urlProduct)
   .then(
     function(response) {
       if (response.status !== 200) {
         console.log('Oops, something went wrong ' +
-          response.status); //переделать на упс и перенос на главную.
+          response.status); 
         return;
       }
       response.json().then(function(data) {
