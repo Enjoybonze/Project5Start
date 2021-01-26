@@ -43,7 +43,7 @@ fetch("http://localhost:3000/api/teddies/" + urlProduct)
         articleElt.appendChild(buttonAdd);
         productsElt.appendChild(articleElt);
         buttonAdd.addEventListener("click", (event) => {
-          event.preventDefault(); // пересмотреть.
+          event.preventDefault();
           let selectedColor = document.getElementById("color");
 
           const infosTeddy = {
